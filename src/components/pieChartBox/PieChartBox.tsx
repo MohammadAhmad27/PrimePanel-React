@@ -13,7 +13,7 @@ export default function PieChartBox() {
     <div className="pieChartBox">
       <h1>Leads By Source</h1>
       <div className="chart">
-        <ResponsiveContainer width="99%" height={300}>
+        <ResponsiveContainer width="99%" height="100%">
           <PieChart>
             <Tooltip
               contentStyle={{ background: "white", borderRadius: "5px" }}
