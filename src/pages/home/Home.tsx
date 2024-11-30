@@ -1,6 +1,9 @@
+import BarChartBox from "../../components/barChartBox/BarChartBox";
 import ChartBox from "../../components/chartBox/ChartBox";
 import TopBox from "../../components/topBox/TopBox";
 import {
+  barChartBoxRevenue,
+  barChartBoxVisit,
   chartBoxConversion,
   chartBoxProduct,
   chartBoxRevenue,
@@ -29,8 +32,12 @@ export default function Home() {
         <ChartBox data={chartBoxRevenue} />
       </div>
       <div className="box box7">box 7</div>
-      <div className="box box8">box 8</div>
-      <div className="box box9">box 9</div>
+      <div className="box box8">
+        <BarChartBox data={barChartBoxVisit} />
+      </div>
+      <div className="box box9">
+        <BarChartBox data={barChartBoxRevenue} />
+      </div>
     </div>
   );
 }
