@@ -4,6 +4,8 @@ import { GridColDef } from "@mui/x-data-grid";
 import { userRows } from "../../data";
 import { useState } from "react";
 import Add from "../../components/add/Add";
+// import { useQuery } from "@tanstack/react-query";
+// import axios from "axios";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -66,6 +68,19 @@ const columns: GridColDef[] = [
 
 export default function Users() {
   const [open, setOpen] = useState(false);
+
+  // Fetching using React Query
+  // const { isLoading, data } = useQuery({
+  //   queryKey: ["allusers"],
+  //   queryFn: async () => {
+  //     const response = await axios.get("http://localhost:8800/api/users");
+  //     if (!response?.data) {
+  //       throw new Error("Failed to fetch users");
+  //     }
+  //     return response?.data;
+  //   },
+  // });
+
   return (
     <div className="users">
       <div className="info">

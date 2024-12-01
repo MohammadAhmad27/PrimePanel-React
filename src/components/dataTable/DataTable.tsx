@@ -1,6 +1,8 @@
 import "./dataTable.scss";
 import Box from "@mui/material/Box";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
+// import { useMutation, useQueryClient } from "@tanstack/react-query";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -10,8 +12,22 @@ interface Props {
 }
 
 export default function DataTable({ columnsData, rowsData, slug }: Props) {
+  // const queryClient = useQueryClient();
+
+  // const mutation = useMutation({
+  //   mutationFn: async (id: number) => {
+  //     const response = await axios.delete(
+  //       `http://localhost:8800/api/${slug}/${id}`
+  //     );
+  //     console.log(response?.data);
+  //   },
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries({ queryKey: [`all${slug}`] });
+  //   },
+  // });
+
   const handleDelete = (id: number) => {
-    console.log(`${id} has been deleted`);
+    // mutation.mutate(id);
   };
 
   const actionColumn: GridColDef = {

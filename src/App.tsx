@@ -1,4 +1,4 @@
-import "./styles/global.scss"
+import "./styles/global.scss";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
@@ -9,9 +9,13 @@ import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import User from "./pages/user/User";
 import Product from "./pages/product/Product";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 function App() {
   const Layout = () => {
+    const queryClient = new QueryClient();
+
     return (
       <div className="main">
         <Navbar />
@@ -20,7 +24,13 @@ function App() {
             <Menu />
           </div>
           <div className="contentContainer">
-            <Outlet />
+            <QueryClientProvider client={queryClient}>
+              <ReactQueryDevtools
+                initialIsOpen={false}
+                buttonPosition={"bottom-right"}
+              />
+              <Outlet />
+            </QueryClientProvider>
           </div>
         </div>
         <Footer />
