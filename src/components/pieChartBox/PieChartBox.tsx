@@ -25,7 +25,7 @@ export default function PieChartBox() {
               innerRadius="70%"
               outerRadius="90%"
               fill="#8884d8"
-              paddingAngle={0}
+              paddingAngle={5}
               dataKey="value"
             >
               {data.map((item) => (

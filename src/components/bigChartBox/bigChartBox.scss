@@ -1,16 +1,19 @@
-.bigChartBox {
+@import "../../styles/responsive.scss";
+
+.bigChartBox{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
 
-  .chart {
+  h1{
+    @include xxl{
+      font-size: 24px;
+    }
+  }
+  .chart{
     width: 100%;
-    height: 100%;
+    height: 300px;
   }
 }

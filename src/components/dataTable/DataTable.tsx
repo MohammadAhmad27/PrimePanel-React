@@ -50,7 +50,7 @@ export default function DataTable({ columnsData, rowsData, slug }: Props) {
 
   return (
     <div className="dataTable">
-      <Box sx={{ height: 500, width: "100%" }}>
+      <Box sx={{ height: 500, width: "80%" }}>
         <DataGrid
           rows={rowsData}
           columns={[...columnsData, actionColumn]}
